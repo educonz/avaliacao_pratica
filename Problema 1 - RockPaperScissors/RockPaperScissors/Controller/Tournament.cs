@@ -28,7 +28,7 @@ namespace RockPaperScissors.Controller
 
         public PlayerGame VerifyRoundWinner(List<PlayerGame> players)
         {
-            return new Game(players).rps_game_winner();
+            return new Game().rps_game_winner(players);
         }
     }
 }
