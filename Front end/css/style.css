@@ -1,0 +1,151 @@
+.nav-blue {
+    background: #21409A;
+}
+
+.nav-right{
+    text-align: right;
+}
+
+.body {
+    background: #222222;
+    font-family: 'Robot';
+}
+
+.cols {
+    padding-left: 20px;
+    background: #333333;
+    color: white;
+    margin-top: 20px;
+}
+
+.td-onecol {
+    color: #999;
+    text-align: right;
+    width: 20px;
+}
+
+.td-seccol {
+    color: #999;
+    text-align: left;
+    padding-left: 23px;
+}
+
+.details-table {
+    visibility: visible;
+}
+
+h1 {
+    font-size: 50px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+table {
+    margin-left: 19px;
+    font-size: 20px;
+}
+
+    table tr {
+        height: 30px;
+        font-weight: 100;
+    }
+
+#banner {
+    border-width: 4px;
+    border-style: solid;
+    border-color: #444;
+    border-top-width: 4px;
+    border-bottom-width: 10px;
+    width: 40px;
+    height: 70px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: perspective(150px) rotateX(-45deg);
+    display: block;
+    margin: auto;
+}
+
+    #banner .fill {
+        animation-name: fillAction;
+        animation-timing-function: cubic-bezier(.2, .8, .6, .4);
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+    }
+
+    #banner .fill-twenty {
+        animation-name: fillActionTwenty;
+        animation-timing-function: cubic-bezier(.2, .8, .6, .4);
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+    }
+
+    #banner #waveShape {
+        animation-name: waveAction;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-duration: 0.5s;
+        width: 10px;
+        height: 40px;
+    }
+
+@keyframes fillAction {
+    0% {
+        transform: translate(0, 50px);
+    }
+
+    100% {
+        transform: translate(0, 10px);
+    }
+}
+
+@keyframes fillActionTwenty {
+    0% {
+        transform: translate(0, 50px);
+    }
+
+    100% {
+        transform: translate(0, 40px);
+    }
+}
+
+@keyframes waveAction {
+    0% {
+        transform: translate(-150px, 0);
+    }
+
+    100% {
+        transform: translate(-30px, 0);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .details-table {
+        visibility: collapse;
+        display: none;
+    }
+
+    #banner {
+        width: 60px;
+        height: 100px;
+    }
+
+    .small-box p {
+        font-size: 19px;
+    }
+
+    h6 {
+        font-size: 14px;
+    }
+}
