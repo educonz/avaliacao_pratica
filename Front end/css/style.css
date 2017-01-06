@@ -2,7 +2,7 @@
     background: #21409A;
 }
 
-.nav-right{
+.nav-right {
     text-align: right;
 }
 
@@ -51,15 +51,48 @@ p {
     font-weight: bold;
 }
 
-table {
+.s-table {
     margin-left: 19px;
     font-size: 20px;
 }
 
-    table tr {
+    .s-table tr {
         height: 30px;
         font-weight: 100;
     }
+
+h4 {
+    color: #fff;
+    font-weight: bold;
+}
+
+.logo-tl {
+    margin-top: -46px;
+    color: white;
+    float: left;
+    font-size: 30px;
+    margin-left: 35px;
+}
+
+#logo {
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Roboto';
+}
+
+#cup-logo {
+    border-width: 4px;
+    border-style: solid;
+    border-color: #fff;
+    border-top-width: 4px;
+    border-bottom-width: 10px;
+    width: 30px;
+    height: 50px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: perspective(150px) rotateX(-45deg);
+}
 
 #banner {
     border-width: 4px;
@@ -83,21 +116,37 @@ table {
         animation-fill-mode: forwards;
     }
 
-    #banner .fill-twenty {
-        animation-name: fillActionTwenty;
-        animation-timing-function: cubic-bezier(.2, .8, .6, .4);
-        animation-duration: 4s;
-        animation-fill-mode: forwards;
-    }
+#cup-logo .cup-fill {
+    animation-name: fillAction;
+    animation-timing-function: cubic-bezier(.2, .8, .6, .4);
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
 
-    #banner #waveShape {
-        animation-name: waveAction;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        animation-duration: 0.5s;
-        width: 10px;
-        height: 40px;
-    }
+#banner .fill-twenty {
+    animation-name: fillActionTwenty;
+    animation-timing-function: cubic-bezier(.2, .8, .6, .4);
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+#banner #waveShape {
+    animation-name: waveAction;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+    width: 10px;
+    height: 40px;
+}
+
+#cup-logo #cup-move {
+    animation-name: waveAction;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+    width: 10px;
+    height: 40px;
+}
 
 @keyframes fillAction {
     0% {
@@ -147,5 +196,15 @@ table {
 
     h6 {
         font-size: 14px;
+    }
+
+    #day {
+        margin-top: -50px;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .row {
+        margin-left: -34px;
     }
 }
